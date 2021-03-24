@@ -1,0 +1,28 @@
+ <%- include('../components/navbar') %>
+
+
+
+ <div class="container">
+ 	<div class="row">
+ 		<div class="col-md-6 mt-5">
+ 			<div class="card">
+ 				<div class="card-header">
+ 					<h4>
+ 						REGISTRASI
+ 					</h4>
+ 				</div>
+
+ 				<form action="/users">
+ 					<input type="text" name="nama" class="form-control" placeholder="Tambah nama ..." required="">
+ 					<input type="text" name="email" class="form-control" placeholder="Tambah email ..." required="">
+ 					<input type="text" name="password" class="form-control" placeholder="Tambah password ..." required="">
+
+ 					<button class="btn btn-outline-secondary" type="submit">Save</button>
+ 				</div>
+ 			</form>
+ 		</div>
+ 	</div>
+ </div>
+</div>
+
+<%- include('../components/footer') %>

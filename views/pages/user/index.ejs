@@ -1,0 +1,70 @@
+<%- include('../components/navbar') %>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>
+                    DATA USER
+                    <a href="/users/create" class="btn btn-success" style="float: right;">
+                        <i class="fa fa-plus"></i>
+                    </a>
+                </h4>
+                
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td colspan="2">
+                            <form action="/users">
+                                <div class="input-group mb-3">
+                                  <input type="text" name="keyword" class="form-control" placeholder="Cari nama user ..." required="">
+                                  <button class="btn btn-outline-secondary" type="submit">Cari</button>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    <thead>
+                        <tr>
+                            <th><center>Nama</center></th>
+                            <th><center>Aksi</center></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% users.forEach(function(user) { %>
+                         <tr>
+                            <td><center><%=user.name.toUpperCase() %></center></td>
+                            <td>
+                                <center>
+                                    <a href="/users/show/:id" class="btn btn-warning">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a href="/users/edit/:id" class="btn btn-primary">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
+                                    <a href="/users/delete/:userId" class="btn btn-danger">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </center>
+                            </td>
+                        </tr>
+                        <% })%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<form action="#" style="width: 700px"class="posisi";>
+<fieldset class="h"/>
+<table style="width: 600px;">
+<body style="background-color:pink"> </body>
+<font size="25px">
+
+
+
+<%- include('../components/footer') %>
